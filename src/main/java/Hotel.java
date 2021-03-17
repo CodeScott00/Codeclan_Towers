@@ -16,11 +16,11 @@ public class Hotel {
         return name;
     }
 
-    public ArrayList<Bedroom> getBedroomCollection() {
-        return bedroomCollection;
+    public int getBedroomCollectionSize() {
+        return bedroomCollection.size();
     }
 
-    public ArrayList<ConferenceRoom> getConferenceRoomCollection() {
-        return conferenceRoomCollection;
+    public int getConferenceRoomCollection() {
+        return conferenceRoomCollection.size();
     }
 }
