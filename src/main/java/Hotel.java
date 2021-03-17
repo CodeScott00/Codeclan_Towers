@@ -49,4 +49,5 @@ public class Hotel {
     public void checkOutGuestFromConferenceRoom(ConferenceRoom conferenceRoom) {
         conferenceRoom.removeGuestFromGuestCollection();
     }
+
 }
