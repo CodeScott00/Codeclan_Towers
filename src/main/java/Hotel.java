@@ -23,4 +23,30 @@ public class Hotel {
     public int getConferenceRoomCollection() {
         return conferenceRoomCollection.size();
     }
+
+    public void addBedroomtoBedroomCollection(Bedroom bedroom) {
+        this.bedroomCollection.add(bedroom);
+    }
+
+    public void checkInGuestToBedroom(Bedroom bedroom, Guest guest) {
+        this.addBedroomtoBedroomCollection(bedroom);
+        bedroom.addGuestToGuestCollection(guest);
+    }
+
+    public void addConferenceRoomToConferenceRoomCollection(ConferenceRoom conferenceRoom) {
+        this.conferenceRoomCollection.add(conferenceRoom);
+    }
+
+    public void checkInGuestToConferenceRoom(ConferenceRoom conferenceRoom, Guest guest) {
+        addConferenceRoomToConferenceRoomCollection(conferenceRoom);
+        conferenceRoom.addGuestToGuestCollection(guest);
+    }
+
+    public void checkOutGuestFromBedroom(Bedroom bedroom) {
+        bedroom.removeGuestFromGuestCollection();
+    }
+
+    public void checkOutGuestFromConferenceRoom(ConferenceRoom conferenceRoom) {
+        conferenceRoom.removeGuestFromGuestCollection();
+    }
 }

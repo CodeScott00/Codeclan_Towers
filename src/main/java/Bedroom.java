@@ -31,4 +31,14 @@ public class Bedroom {
     public int getNumberOfGuestCollection() {
         return guestCollection.size();
     }
+
+    public void addGuestToGuestCollection(Guest guest) {
+        if (this.capacity >= getNumberOfGuestCollection() + 1){
+            this.guestCollection.add(guest);
+        }
+    }
+
+    public void removeGuestFromGuestCollection() {
+        this.guestCollection.remove(0);
+    }
 }

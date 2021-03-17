@@ -2,6 +2,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
 
 public class ConferanceRoomTest {
 
@@ -31,6 +32,20 @@ public class ConferanceRoomTest {
 
     @Test
     public void getGuestCollectionEmpty(){
+        assertEquals(0, conferenceRoom.getNumberOfGuestCollection());
+    }
+
+    @Test
+    public void canAddGuestsToConferenceRoom(){
+        conferenceRoom.addGuestToGuestCollection(guest3);
+        conferenceRoom.addGuestToGuestCollection(guest2);
+        assertEquals(2, conferenceRoom.getNumberOfGuestCollection());
+    }
+
+    @Test
+    public void canRemoveGuestFromGuestCollection(){
+        conferenceRoom.addGuestToGuestCollection(guest1);
+        conferenceRoom.removeGuestFromGuestCollection();
         assertEquals(0, conferenceRoom.getNumberOfGuestCollection());
     }
 }

@@ -38,4 +38,17 @@ public class BedroomTest {
     public void getGuestCollectionEmpty(){
         assertEquals(0, bedroom.getNumberOfGuestCollection());
     }
+
+    @Test
+    public void canAddGuestToGuestList(){
+        bedroom.addGuestToGuestCollection(guest1);
+        assertEquals(1, bedroom.getNumberOfGuestCollection());
+    }
+
+    @Test
+    public void canRemoveGuestFromGuestList(){
+        bedroom.addGuestToGuestCollection(guest3);
+        bedroom.removeGuestFromGuestCollection();
+        assertEquals(0, bedroom.getNumberOfGuestCollection());
+    }
 }
